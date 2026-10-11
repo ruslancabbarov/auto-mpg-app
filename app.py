@@ -1,13 +1,14 @@
-from pathlib import Path
+import os
 
+import auto_mpg_transformers
 import joblib
 import numpy as np
 import pandas as pd
 import streamlit as st
 
 
-APP_DIR = Path(__file__).resolve().parent
-MODEL_PATH = APP_DIR / "best_auto_mpg_rf_model.pkl"
+APP_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(APP_DIR, "best_auto_mpg_rf_model.pkl")
 HERO_IMAGE_URL = (
     "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7"
     "?auto=format&fit=crop&w=1800&q=85"
